@@ -1,4 +1,4 @@
-package blog.demo;
+package blog.demo.repository;
 
 import blog.demo.model.Post;
 import org.springframework.data.repository.CrudRepository;
