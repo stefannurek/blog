@@ -1,6 +1,7 @@
 package blog.demo.controller;
 
 import blog.demo.PostRepository;
+import blog.demo.model.Comment;
 import blog.demo.model.Post;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -33,6 +34,7 @@ public class PostController {
     @GetMapping("/{id}")
     public String showPost(@PathVariable Long id, ModelMap modelMap){
         modelMap.put("post", postRepository.findById(id).get());
+        modelMap.put("comment", new Comment());
         return "posts/show";
     }
 }
