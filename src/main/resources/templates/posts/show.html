@@ -10,12 +10,19 @@
 </head>
 <body>
 
-
-
 <div class="container">
+
+    <div class="alert alert-success" th:if="${message}">
+        <strong th:if="${message}" th:text="${message}"></strong>
+    </div>
+
     <h1> Post id:</h1>
     <h3 th:text="${post.id}"></h3>
     <p th:text="${post.content}"></p>
+    <ul class="list-group">
+        <li class="list-group-item" th:each="comment: ${comments}"
+            th:text="${comment}"></li>
+    </ul>
 
     <h1>Dodaj komentarz</h1>
 <form th:object="${comment}" th:action="@{/comments}" th:method="post">
