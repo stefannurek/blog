@@ -29,6 +29,6 @@ public class Post {
     public String toString() {
         return "Post" +
                 "id=" + id +
-                ", content='" + content+;
+                ", content='" + content;
     }
 }
