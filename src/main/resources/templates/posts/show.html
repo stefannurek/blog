@@ -18,7 +18,8 @@
 
     <h1> Post id:</h1>
     <h3 th:text="${post.id}"></h3>
-    <p th:text="${post.content}"></p>
+    <p th:text="${post.content}">
+    <h2>Comments:</h2>
     <ul class="list-group">
         <li class="list-group-item" th:each="comment: ${comments}"
             th:text="${comment}"></li>
